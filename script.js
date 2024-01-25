@@ -27,6 +27,7 @@ function stopBlow() {
     isBlowing = false;
     document.getElementById('blowButton').textContent = 'Blow into Mic';
     document.getElementById('flame').style.display = 'block';
+    document.getElementById('glow').style.display = 'block';
 
   // Clean up audio context when stopping
     if (audioContext) {
@@ -64,6 +65,7 @@ function handleSuccess(stream) {
             if (duration >= BLOW_DURATION_THRESHOLD) {
             if (!blowEndedTime) {
                 document.getElementById('flame').style.display = 'none';
+                document.getElementById('glow').style.display = 'none';
             }
             }
         }
@@ -74,6 +76,7 @@ function handleSuccess(stream) {
 
             if (recoveryDuration >= BLOW_RECOVERY_DELAY) {
             document.getElementById('flame').style.display = 'block';
+            document.getElementById('glow').style.display = 'block';
             blowDetectedStartTime = 0;
             blowEndedTime = 0;
             }
