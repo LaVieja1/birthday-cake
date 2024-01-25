@@ -5,7 +5,23 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f7fafc;
+    background-color: #4d4d4d;
+    gap: 50px;
+}
+
+button {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 16px;
+  border: 2px solid black;
+  background-color: rgb(34, 156, 34);
+  color: white;
+}
+
+.cake {
+  width: 325px;
+  height: 400px;
 }
 
 .flame {
@@ -14,6 +30,7 @@ body {
     transform: scale(2) translate(-13px, -15px);
     width: 1px;
     display: block;
+    top: 105px;
 }
 
 .glow {
@@ -23,12 +40,11 @@ body {
     height: 280px;
     opacity: 0.5;
     width: 280px;
+    top: 20px;
 }
 
 .flame,
 .glow {
-    bottom: 0;
-    left: 0;
     margin: auto;
     pointer-events: none;
     position: absolute;
