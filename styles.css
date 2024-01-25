@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7fafc;
+}
+
+.cake {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    background-color: #ffd700;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.candle {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: #a52a2a;
+    border-radius: 5px;
+    top: 20px;
+    left: 70px;
+}
+
+.flame {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ff4500 10%, transparent 80%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    top: 0;
+    left: 0;
+    display: block; /* Initially visible */
+}
+
+.base {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #a52a2a;
+    bottom: 0;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: #f7fafc;
+    border-bottom: 2px solid #a52a2a;
+}
+
+.layer:nth-child(1) {
+    top: 20px;
+}
+
+.layer:nth-child(2) {
+    top: 70px;
+}
+
+.layer:nth-child(3) {
+    top: 120px;
+}
+
+.cherry {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    top: 170px;
+    left: 65px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
